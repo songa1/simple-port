@@ -5,20 +5,33 @@
     left: 0;
     top: 0;
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    height: 100vh;
     overflow: auto; /* Enable scroll if needed */
+    background-image: url(../img/achille\ songa\ logo.jpg);
+    background-size: cover;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
+    background-color: #585858;
+    color: #fff;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 700px; /* Could be more or less, depending on screen size */
   }
+
+    .modal-content form {
+
+    }
+
+    .modal-content form input {
+      width: 100%;
+      padding: 10px;
+      color: #000000;
+    }
   
   /* The Close Button */
   .close {
