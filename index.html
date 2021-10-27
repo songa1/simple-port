@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/modal.css">
     <style>
         * {
             box-sizing: border-box;
@@ -31,18 +32,16 @@
         }
         .body {
             background-color: var(--bg-color);
-            color: var(--font-light);
+            color: var(--font-color);
             transition: all 500ms;
             margin: 0;
             width: 100%;
-        }
-        p {
-            color: var(--font-color);
         }
         button {
             padding: 10px 30px;
             border: 3px solid var(--font-light);
             transition: all 250ms;
+            border-radius: 5px;
         }
         button:hover {
             color: var(--bg-color);
@@ -50,8 +49,8 @@
         }
         .container {
             max-width: 1000px;
-            margin: 20px auto;
-            padding: 50px;
+            margin: 0px auto;
+            padding: 10px 50px;
         }
         .header {
             display: flex;
@@ -102,40 +101,68 @@
             <h1>Achille Songa</h1>
             <div class="nav-links">
                 <p class="nav-item" id="toggle">🌞</p>
-                <button>Subscribe</button>
+                <button id="myBtn">Subscribe</button>
             </div>
             
         </div>
         <div class="content">
             <div class="desc">
-                <h1>Hi, I am Achille Songa.</h1>
+                <h1 style="text-align: center;padding: 5px 20px;">Hi, I am Achille Songa.</h1>
+                <!-- <center><img src="./coding.gif" style="margin: 0 auto;max-width: 200px;"></center> -->
+                <p style="text-align: center;font-weight: bolder;font-size: 60px;margin: 5px;">I write, I code, I grow.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae, ratione, voluptatem sapiente ad aspernatur accusamus repellendus libero reiciendis nemo officiis enim temporibus nostrum in est vitae consequuntur laborum velit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quaerat voluptate ab, nam libero voluptatibus tenetur natus fuga reiciendis minus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, repudiandae.</p>
             </div>
             <div class="social">
-                <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://facebook.com/songa.achille.9" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/achille_songa" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/achille_songa" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://rw.linkedin.com/in/achillesonga" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com/c/achillesonga" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/songa1" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
         <div class="footer">
             <p>&copy; Achille Songa 2021</p>
         </div>
     </div>
+
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the Modal Body</p>
+              <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+              <h3>Modal Footer</h3>
+            </div>
+          </div>
+      
+      </div>
+
+    <script src="./js/modal.js"></script>
     <script>
-        const toggle = document.getElementById("toggle");
+        const toggle = document.querySelector("#toggle");
         toggle.addEventListener("click", modeSwitch);
 
         let isLight = true;
 
         function modeSwitch() {
-            isLight = !isLight;
-            isLight ? toggle.innerText = "🌞" : toggle.innerText = "🌚";
-            var rootElement = document.body;
-            rootElement.classList.toggle("darkMode");
+        isLight = !isLight;
+        let root = document.body;
+        
+        isLight ? toggle.innerText = "🌞" : toggle.innerText = "🌚";
+        
+        root.classList.toggle("lightMode");
         }
+
+
     </script>
 </body>
 </html>
