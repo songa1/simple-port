@@ -33,6 +33,10 @@
             display: flex;
             align-items: center;
         }
+
+        .header img {
+            width: 70px;
+        }
         .nav-links {
             margin-left: auto;
             display: flex;
@@ -45,6 +49,18 @@
             border: none;
             color: #fff;
             border-radius: 5px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: rgb(6, 44, 87);
+            outline: none;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: rgb(0, 119, 255);
         }
         .header button:hover {
             background-color: rgb(0, 119, 255);
@@ -83,7 +99,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Achille Songa</h1>
+            <!-- <h1>Achille Songa</h1> -->
+            <img src="./img/achille songa logo.jpg" alt="Achille Songa logo" id="logo">
             <div class="nav-links">
                 <button id="myBtn">Subscribe</button>
             </div>
@@ -114,30 +131,30 @@
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">&times;</span>
-              <h2>I do have a talent of making people happy and teaching. I would like you to be one of my friends with whom I share my days with. Would you like that?</h2>
-            </div>
-            <div class="modal-body">
-              <form>
-                  <label>If so, tell me your name</label>
-                  <input type="text" placeholder="eg: Achille Songa">
-                  <label>And your email</label>
-                  <input type="email" placeholder="eg: me@achillesonga.com">
-                  <button>Become my friend!</button>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <h3>Modal Footer</h3>
-            </div>
-          </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2>I do have a talent of making people happy and teaching. I would like you to be one of my friends with whom I share my days. Would you like that?</h2>
+                </div>
+                <div class="modal-body">
+                  <form>
+                      <label>If so, tell me your name</label>
+                      <input type="text" placeholder="eg: Achille Songa">
+                      <label>And your email</label>
+                      <input type="email" placeholder="eg: me@achillesonga.com">
+                      <input type="button" class="btn" value="Become my friend!">
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <h3>I will get in touch very soon, and I will never spam you. Thanks!</h3>
+                </div>
+        </div>
       
       </div>
 
     <script src="./js/modal.js"></script>
     <script>
-
+        
     </script>
 </body>
 </html>
