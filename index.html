@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achille Songa - Home</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Titillium Web', sans-serif;
+        }
+        :root {
+            --bg-color: #E8E6DC;
+            --bg-light: #DCDACA;
+            --font-color: #3D3D3D;
+            --font-light: #202020;
+        }
+        .nav-links #toggle {
+            pointer: cursor !important;
+        }
+        .darkMode {
+            --bg-color: #171923;
+            --bg-light: #232535;
+            --font-color: #c5cddb;
+            --font-light: #ffffff;
+        }
+        .body {
+            background-color: var(--bg-color);
+            color: var(--font-light);
+            transition: all 500ms;
+            margin: 0;
+            width: 100%;
+        }
+        p {
+            color: var(--font-color);
+        }
+        button {
+            padding: 10px 30px;
+            border: 3px solid var(--font-light);
+            transition: all 250ms;
+        }
+        button:hover {
+            color: var(--bg-color);
+            background-color: var(--font-light);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 50px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+        .header button {
+            padding: 10px 20px;
+            background-color: rgb(6, 44, 87);
+            outline: none;
+            border: none;
+            color: #fff;
+        }
+        .content {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .desc p {
+            text-align: justify;
+        }
+        .social {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+        .social a {
+            padding: 10px;
+        }
+        .social a i {
+            font-size: 30px;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Achille Songa</h1>
+            <div class="nav-links">
+                <p class="nav-item" id="toggle">🌞</p>
+                <button>Subscribe</button>
+            </div>
+            
+        </div>
+        <div class="content">
+            <div class="desc">
+                <h1>Hi, I am Achille Songa.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio molestiae, ratione, voluptatem sapiente ad aspernatur accusamus repellendus libero reiciendis nemo officiis enim temporibus nostrum in est vitae consequuntur laborum velit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quaerat voluptate ab, nam libero voluptatibus tenetur natus fuga reiciendis minus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, repudiandae.</p>
+            </div>
+            <div class="social">
+                <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; Achille Songa 2021</p>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById("toggle");
+        toggle.addEventListener("click", modeSwitch);
+
+        let isLight = true;
+
+        function modeSwitch() {
+            isLight = !isLight;
+            isLight ? toggle.innerText = "🌞" : toggle.innerText = "🌚";
+            var rootElement = document.body;
+            rootElement.classList.toggle("darkMode");
+        }
+    </script>
+</body>
+</html>
