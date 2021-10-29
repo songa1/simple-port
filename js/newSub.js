@@ -4,7 +4,7 @@ const nameValue = document.getElementById('name');
 
 submitBtn.addEventListener('click', (e)=> {
     e.preventDefault();
-    fetch('https://achille-api-stg.herokuapp.com/achille/api/subscribe', {
+    fetch('http://achille-api-stg.herokuapp.com/achille/api/subscribe', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
