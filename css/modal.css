@@ -48,3 +48,22 @@
     text-decoration: none;
     cursor: pointer;
   }
+  .tag {
+    font-weight: bolder;
+    font-size: 60px;
+    margin: 5px 0;
+  }
+  .greeting {
+    padding: 5px 20px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+  }
+  @media(max-width:550px){
+    .tag {
+        font-size: 30px;
+    }
+    .container {
+        max-width: 550px;
+    }
+  }

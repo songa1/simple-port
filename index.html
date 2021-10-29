@@ -72,12 +72,16 @@
             flex-direction: column;
         }
         .desc p {
+            text-align: center;
+        }
+        .desc span {
             text-align: justify;
         }
         .social {
             margin: 0 auto;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
         }
         .social a {
             padding: 10px;
@@ -108,10 +112,10 @@
         </div>
         <div class="content">
             <div class="desc">
-                <h1 style="text-align: center;padding: 5px 20px;margin: 0;">Hi, I am Achille Songa.</h1>
+                <p class="greeting">Hi, I am Achille Songa.</p>
                 <!-- <center><img src="./coding.gif" style="margin: 0 auto;max-width: 200px;"></center> -->
-                <p style="text-align: center;font-weight: bolder;font-size: 60px;margin: 5px;">I write, I code, I grow.</p>
-                <p style="line-height: 2;font-weight: 800;">Making a better world is my drive. I am a talented guy trying to live my best life. I am simple, humble, kind and total introvert.<br>Being an introvert has taught me some of important life lessons. I love listening to people talking and you would be surprised by just spending a day with me, I am kinda boring but funny at the same time. I love listening to music and coding. I spend most of my time writing, listening and watching some of my favorite podcasts and posts.<br>I am aspiring to become the best communicator I can be so I can share what's in me with the world. I spend most of my time learning, I can say that I am a busy person.</p>
+                <p class="tag">I write, I code, I grow.</p>
+                <span style="line-height: 2;font-weight: 800;">Making a better world is my drive. I am a talented guy trying to live my best life. I am simple, humble, kind and total introvert.<br>Being an introvert has taught me some of important life lessons. I love listening to people talking and you would be surprised by just spending a day with me, I am kinda boring but funny at the same time. I love listening to music and coding. I spend most of my time writing, listening and watching some of my favorite podcasts and posts.<br>I am aspiring to become the best communicator I can be so I can share what's in me with the world. I spend most of my time learning, I can say that I am a busy person.</span>
             </div>
             <div class="social">
                 <a href="https://facebook.com/songa.achille.9" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -139,10 +143,10 @@
                 <div class="modal-body">
                   <form>
                       <label>If so, tell me your name</label>
-                      <input type="text" placeholder="eg: Achille Songa">
+                      <input type="text" placeholder="eg: Achille Songa" id="name">
                       <label>And your email</label>
-                      <input type="email" placeholder="eg: me@achillesonga.com">
-                      <input type="button" class="btn" value="Become my friend!">
+                      <input type="email" placeholder="eg: me@achillesonga.com" id="email">
+                      <input type="button" class="btn" value="Become my friend!" id="submit">
                   </form>
                 </div>
                 <div class="modal-footer">
@@ -153,8 +157,6 @@
       </div>
 
     <script src="./js/modal.js"></script>
-    <script>
-        
-    </script>
+    <script src="./js/newSub.js"></script>
 </body>
 </html>
