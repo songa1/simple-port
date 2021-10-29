@@ -7,7 +7,8 @@ submitBtn.addEventListener('click', (e)=> {
     fetch('http://achille-api-stg.herokuapp.com/achille/api/subscribe', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify({
             email: email.value,
@@ -15,5 +16,5 @@ submitBtn.addEventListener('click', (e)=> {
         })
     })
     .then(res => res.json())
-    .then(data=> console.log(data))
+    .then(data=> console.log(data.name))
 })
