@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    transition: all 0.4s;
+}
+.body {
+    background-color: rgb(179, 175, 175);
+    color: #333;
+    transition: all 500ms;
+    margin: 0;
+    width: 100%;
+}
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    width: 70px;
+}
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.header button {
+    padding: 10px 20px;
+    background-color: rgb(6, 44, 87);
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: rgb(6, 44, 87);
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: rgb(0, 119, 255);
+}
+.header button:hover {
+    background-color: rgb(0, 119, 255);
+}
+.content {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.desc p {
+    text-align: center;
+}
+.desc span {
+    text-align: justify;
+}
+.social {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.social a {
+    padding: 10px;
+}
+.social a i {
+    font-size: 30px;
+    color: rgb(6, 44, 87);
+}
+.social a i:hover {
+    color: rgb(0, 119, 255);
+}
+.footer {
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+}

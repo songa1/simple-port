@@ -5,18 +5,10 @@ let fb = document.querySelector('.feedback');
 
 submitBtn.addEventListener('click', (e)=> {
     e.preventDefault();
-    fetch('http://achille-api-stg.herokuapp.com/achille/api/subscribe', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-            email: email.value,
-            name: nameValue.value
-        })
+    db.collection('subscribers').add({
+        email: email.value,
+        name: nameValue.value
     })
-    .then(res => res.json())
     .then(data=> {
         fb.style.color = 'white';
         fb.style.backgroundColor = 'green';
@@ -34,4 +26,5 @@ submitBtn.addEventListener('click', (e)=> {
             
         }, 5000);
     })
+    .catch(err=> alert(`${err.message}`))
 })
